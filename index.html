@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Insurance Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    
+</style>
+</head>
+
+<body>
+    <div class="top-div">
+        <img src="Knights Final.png">
+        
+        <span id="element"><h2 id="animation">LIFE INSURANCE | HEALTH INSURANCE | MOTOR INSURANCE | HOUSE INSURANCE | TRAVEL INSURANCE | GROUP
+            INSURANCE</h2></span>
+       
+    </div>
+    <div class="container">
+        <div class="left-half">
+            <div class="left-content">
+                <h1>+ CONSULTATION</h1>
+            </div>
+            <div class="left-content">
+                <h1>+ POLICY ISSUANCE SUPPORT SYSTEM</h1>
+            </div>
+            <div class="left-content">
+                <h1>+ RENEWAL SUPPORT</h1>
+            </div>
+            <div class="left-content">
+                <h1>+ CLAIM SUPPORT SYSTEM SYSTEM</h1>
+            </div>
+        </div>
+        <div class="right-half">
+            <div class="login-form">
+                <h3>GET IN TOUCH</h3>
+                <form   method="post" onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-div">
+        <div class="products-offered">
+            
+            
+                <p><span class="fontt"><pre><p><i class="fa-solid fa-user"></i><b><span class="size"> Ruchi Dalmia</span></b>      <i class="fa-solid fa-envelope"></i> <span class="size"><b>ruchid.insurance@gmail.com</b></span>      <i class="fa-solid fa-square-phone"></i><span class="size"> <b>+91 9972597936</b></span>  </p></pre></span></p>
+        </div>
+
+    </div>
+    
+    </script>
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({ 
+                Host:"smtp.elasticemail.com",
+                Username:"ruchid.insurance@gmail.com",
+                Password:"40EF8F51944B8C0745D89FD4D93AF801CD1C",
+                To: 'ruchid.insurance@gmail.com',
+                From:"ruchid.insurance@gmail.com",
+                Subject: "white knight enquiry",
+                Body: "mail id: "+document.getElementById("email").value+"<br>Phone No: "+document.getElementById("phone").value+"<br>Name: "+document.getElementById("name").value+"<br>Message:  "+document.getElementById("message").value
+
+            }).then(
+                message => alert(message)
+            );
+        }
+
+    </script>
+</body>
+
+</html>
